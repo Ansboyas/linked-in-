@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Friend Module</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f2ef;
+    }
+
+    header {
+      background-color: #2846a7;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+    }
+
+    /* Sidebar styling */
+    .sidebar {
+      width: 30%;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+    }
+
+    .friend-search input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .friend-list button {
+      width: 100%;
+      padding: 10px;
+      background-color: #2846a7;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 5px 0;
+    }
+
+    .friend-list button:hover {
+      background-color: #2846a7;
+    }
+
+    /* Main content styling */
+    .main-content {
+      width: 65%;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .post {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .post h3 {
+      margin: 0 0 10px;
+    }
+
+    .post img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .activity {
+      margin-top: 15px;
+      color: gray;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Network</h1>
+  </header>
+
+  <div class="container">
+    <!-- Friend Sidebar -->
+    <aside class="sidebar">
+      <h3>Search Friends</h3>
+      <div class="friend-search">
+        <input type="text" id="friendSearch" placeholder="Search for friends..." oninput="searchFriends()">
+      </div>
+      <div class="friend-list" id="friendList">
+        <!-- Friend buttons will be dynamically generated here -->
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <p>Select a friend to view their posts and recent activities.</p>
+    </main>
+  </div>
+
+  <script>
+    // Friend Data
+    const allFriends = [
+      {
+        name: "Akash A",
+        posts: [
+          {
+            title: "Machine Learning Projects  ",
+            image: "download.jpg",
+            description: "Machine Learning (ML) is a subset of Artificial Intelligence (AI) that enables computers to learn patterns from data and make predictions or decisions without being explicitly programmed. Instead of following rigid instructions, ML models use data-driven algorithms to improve performance over time."
+          }
+        ],
+        activity: "Recently commented on 'AI Research Trends'."
+      },
+      {
+        name: "Balaji S",
+        posts: [
+          {
+            title: "Robotics AI Research",
+            image: "FOUQRZLKBKSQ17D.jpg",
+            description: "Robotics AI is the integration of Artificial Intelligence techniques with robotics to enable machines to perform tasks autonomously. These robots can analyze their surroundings, make decisions, and adapt to new situations without human intervention, combining hardware (robotic components) and software (AI algorithms)."
+          }
+        ],
+        activity: "Liked a post on 'Sustainable Construction'."
+      },
+      {
+        name: "Anand S",
+        posts: [
+          {
+            title: "Bridge Design",
+            image: "OIP (4).jpg",
+            description: "Bridge design is the process of planning, analyzing, and constructing structures that span physical obstacles like rivers, valleys, or roads. The goal is to ensure stability, durability, and safety while optimizing material use and cost."
+          },
+          {
+            title: "Ai Object Detection ",
+            image: "OIP (5).jpg",
+            description: "Worked on integrating smart traffic lights into urban planning."
+          }
+        ],
+        activity: "Started following 'Modern Architecture Group'."
+      }
+    ];
+
+    // Search Functionality
+    function searchFriends() {
+      const searchValue = document.getElementById("friendSearch").value.toLowerCase();
+      const friendList = document.getElementById("friendList");
+      friendList.innerHTML = ""; // Clear the list
+
+      const filteredFriends = allFriends.filter(friend => friend.name.toLowerCase().includes(searchValue));
+
+      if (filteredFriends.length > 0) {
+        filteredFriends.forEach(friend => {
+          friendList.innerHTML += `<button onclick="viewFriendPosts('${friend.name}')">${friend.name}</button>`;
+        });
+      } else {
+        friendList.innerHTML = "<p>No friends found.</p>";
+      }
+    }
+
+    // View Friend Posts
+    function viewFriendPosts(friendName) {
+      const friend = allFriends.find(friend => friend.name === friendName);
+      const mainContent = document.getElementById("mainContent");
+      mainContent.innerHTML = ""; // Clear the content
+
+      if (friend) {
+        // Show Friend's Posts
+        friend.posts.forEach(post => {
+          mainContent.innerHTML += `
+            <div class="post">
+              <h3>${post.title}</h3>
+              <img src="${post.image}" alt="${post.title}">
+              <p>${post.description}</p>
+            </div>
+          `;
+        });
+
+        // Show Friend's Activity
+        mainContent.innerHTML += `<div class="activity">Recent Activity: ${friend.activity}</div>`;
+      } else {
+        mainContent.innerHTML = `<p>No posts found for ${friendName}.</p>`;
+      }
+    }
+
+    // Initialize Friend List
+    function initializeFriends() {
+      const friendList = document.getElementById("friendList");
+      allFriends.forEach(friend => {
+        friendList.innerHTML += `<button onclick="viewFriendPosts('${friend.name}')">${friend.name}</button>`;
+      });
+    }
+
+    // Load Friends on Page Load
+    initializeFriends();
+  </script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiters - JobConnect</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2846a7;
+            padding: 15px;
+            color: white;
+        }
+
+        .navbar .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Recruiter Section */
+        .recruiter-intro {
+            text-align: center;
+            padding: 30px;
+            background-color: #2846a7;
+            color: white;
+            font-size: 20px;
+        }
+
+        .recruiter-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .recruiter-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .recruiter-card:hover {
+            transform: scale(1.05);
+        }
+
+        .recruiter-card img {
+            width: 100px;
+            border-radius: 50%;
+            border: 3px solid #2846a7;
+        }
+
+        .recruiter-card h3 {
+            margin-top: 10px;
+            color: #2846a7;
+        }
+
+        .recruiter-card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .recruiter-card a {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #2846a7;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Company Section */
+        .company-section {
+            text-align: center;
+            padding: 30px;
+            background-color: #f1f1f1;
+        }
+
+        .company-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .company-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .company-card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .company-card h3 {
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #2846a7;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">JobConnect</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore_job_seekers.html">Job Seekers</a></li>
+            <li><a href="friends.html">Friends</a></li>
+            <li><a href="post.html">Posts</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="recruiter.html">Recruiters</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="recruiter-intro">
+        <h1>Meet Top Recruiters</h1>
+        <p>Connect with top recruiters and explore the best job opportunities.</p>
+    </section>
+
+    <section class="recruiter-container">
+        <div class="recruiter-card">
+            <img src="OIP (8).jpg" alt="Recruiter 1">
+            <h3>John Doe</h3>
+            <p><strong>Company:</strong> TechWave Solutions</p>
+            <p><strong>Industry:</strong> IT & Software</p>
+            <p><strong>Experience:</strong> 10+ years</p>
+            <a href="#">View Profile</a>
+        </div>
+
+        <div class="recruiter-card">
+            <img src="OIP (9).jpg" alt="Recruiter 2">
+            <h3>Jane Smith</h3>
+            <p><strong>Company:</strong> HR Connect</p>
+            <p><strong>Industry:</strong> Human Resources</p>
+            <p><strong>Experience:</strong> 8+ years</p>
+            <a href="#">View Profile</a>
+        </div>
+
+        <div class="recruiter-card">
+            <img src="OIP (10).jpg" alt="Recruiter 3">
+            <h3>Michael Johnson</h3>
+            <p><strong>Company:</strong> FinEdge Consulting</p>
+            <p><strong>Industry:</strong> Finance & Banking</p>
+            <p><strong>Experience:</strong> 12+ years</p>
+            <a href="#">View Profile</a>
+        </div>
+    </section>
+
+    <section class="company-section">
+        <h2>Top Hiring Companies</h2>
+        <div class="company-container">
+            <div class="company-card">
+                <img src="how-to-work-with-a-recruiter-14993622.jpg" alt="Company 1">
+                <h3>TechWave Solutions</h3>
+                <p>Leading the IT industry with innovative solutions.</p>
+            </div>
+
+            <div class="company-card">
+                <img src="OIP (7).jpg" alt="Company 2">
+                <h3>HR Connect</h3>
+                <p>Building strong HR connections worldwide.</p>
+            </div>
+
+            <div class="company-card">
+                <img src="recruiting.jpg" alt="Company 3">
+                <h3>FinEdge Consulting</h3>
+                <p>Finance & banking recruitment experts.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 JobConnect. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

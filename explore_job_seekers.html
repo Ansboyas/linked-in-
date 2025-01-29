@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Job Seekers - JobConnect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2846a7;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            background-color: #2846a7;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 5px;
+            border-radius: 5px;
+        }
+
+        .job-seeker {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .job-seeker h3 {
+            margin: 0;
+            color: #2846a7;
+        }
+
+        .job-seeker p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .apply-btn {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 6px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .apply-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<header>Explore Job Seekers</header>
+
+<div class="container">
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search by skill, location, or experience...">
+        <button onclick="searchJobSeekers()">Search</button>
+    </div>
+
+    <!-- Job Seekers List -->
+    <div id="jobSeekersList">
+        <!-- Job Seekers will be loaded here -->
+    </div>
+</div>
+
+<script>
+    // Dummy Job Seeker Data
+    const jobSeekers = [
+        { name: "John Doe", skills: "Python, Data Science", experience: "3 years", location: "New York", profileLink: "#" },
+        { name: "Jane Smith", skills: "React, JavaScript", experience: "5 years", location: "San Francisco", profileLink: "#" },
+        { name: "Alex Johnson", skills: "Java, Spring Boot", experience: "4 years", location: "Chicago", profileLink: "#" },
+        { name: "Emily Davis", skills: "Machine Learning, AI", experience: "2 years", location: "Boston", profileLink: "#" },
+        { name: "David Wilson", skills: "Cybersecurity, Linux", experience: "6 years", location: "Los Angeles", profileLink: "#" }
+    ];
+
+    // Function to display job seekers
+    function displayJobSeekers(seekers) {
+        const jobSeekersList = document.getElementById("jobSeekersList");
+        jobSeekersList.innerHTML = "";
+
+        seekers.forEach(seeker => {
+            jobSeekersList.innerHTML += `
+                <div class="job-seeker">
+                    <h3>${seeker.name}</h3>
+                    <p><strong>Skills:</strong> ${seeker.skills}</p>
+                    <p><strong>Experience:</strong> ${seeker.experience}</p>
+                    <p><strong>Location:</strong> ${seeker.location}</p>
+                    <a href="${seeker.profileLink}" class="apply-btn">View Profile</a>
+                </div>
+            `;
+        });
+    }
+
+    // Initial display of job seekers
+    displayJobSeekers(jobSeekers);
+
+    // Search function
+    function searchJobSeekers() {
+        const query = document.getElementById("searchInput").value.toLowerCase();
+        const filteredSeekers = jobSeekers.filter(seeker =>
+            seeker.name.toLowerCase().includes(query) ||
+            seeker.skills.toLowerCase().includes(query) ||
+            seeker.experience.toLowerCase().includes(query) ||
+            seeker.location.toLowerCase().includes(query)
+        );
+        displayJobSeekers(filteredSeekers);
+    }
+</script>
+
+</body>
+</html>

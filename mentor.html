@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentors - JobConnect</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2846a7;
+            padding: 15px;
+            color: white;
+        }
+
+        .navbar .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Mentor Section */
+        .mentor-intro {
+            text-align: center;
+            padding: 30px;
+            background-color: #2846a7;
+            color: white;
+            font-size: 20px;
+        }
+
+        .mentor-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .mentor-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .mentor-card:hover {
+            transform: scale(1.05);
+        }
+
+        .mentor-card img {
+            width: 100px;
+            border-radius: 50%;
+            border: 3px solid #215388;
+        }
+
+        .mentor-card h3 {
+            margin-top: 10px;
+            color: #2861a7;
+        }
+
+        .mentor-card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .mentor-card a {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #284ea7;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Mentorship Programs Section */
+        .program-section {
+            text-align: center;
+            padding: 30px;
+            background-color: #f1f1f1;
+        }
+
+        .program-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .program-card h3 {
+            color: #333;
+        }
+
+        .program-card p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #284ea7;;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">JobConnect</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore_job_seekers.html">Job Seekers</a></li>
+            <li><a href="friends.html">Friends</a></li>
+            <li><a href="post.html">Posts</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="mentor.html">Mentors</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="mentor-intro">
+        <h1>Find Experienced Mentors</h1>
+        <p>Connect with professionals who can guide you in your career journey.</p>
+    </section>
+
+    <section class="mentor-container">
+        <div class="mentor-card">
+            <img src="OIP (11).jpg" alt="Mentor 1">
+            <h3>Sarah Williams</h3>
+            <p><strong>Expertise:</strong> Software Engineering</p>
+            <p><strong>Experience:</strong> 15+ years</p>
+            <p><strong>Industry:</strong> IT & Development</p>
+            <a href="#">View Profile</a>
+        </div>
+
+        <div class="mentor-card">
+            <img src="OIP (12).jpg" alt="Mentor 2">
+            <h3>David Brown</h3>
+            <p><strong>Expertise:</strong> Business Management</p>
+            <p><strong>Experience:</strong> 10+ years</p>
+            <p><strong>Industry:</strong> Entrepreneurship & Startups</p>
+            <a href="#">View Profile</a>
+        </div>
+
+        <div class="mentor-card">
+            <img src="OIP (13).jpg" alt="Mentor 3">
+            <h3>Lisa Johnson</h3>
+            <p><strong>Expertise:</strong> Digital Marketing</p>
+            <p><strong>Experience:</strong> 8+ years</p>
+            <p><strong>Industry:</strong> Marketing & E-commerce</p>
+            <a href="#">View Profile</a>
+        </div>
+    </section>
+
+    <section class="program-section">
+        <h2>Mentorship Programs</h2>
+        <div class="program-container">
+            <div class="program-card">
+                <h3>Career Growth Program</h3>
+                <p>Personalized guidance to boost your career.</p>
+            </div>
+
+            <div class="program-card">
+                <h3>Entrepreneurship Coaching</h3>
+                <p>Learn from successful business leaders.</p>
+            </div>
+
+            <div class="program-card">
+                <h3>Tech Skills Training</h3>
+                <p>Enhance your coding and software development skills.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 JobConnect. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

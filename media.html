@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image & Video Module</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f2ef;
+    }
+
+    header {
+      background-color: #2846a7;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .scroll-container {
+      display: flex;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      padding: 20px;
+      gap: 20px;
+      background-color: #ffffff;
+    }
+
+    .scroll-container::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+      background-color: #2846a7;
+      border-radius: 10px;
+    }
+
+    .media-card {
+      flex: 0 0 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .media-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .media-card video {
+      width: 100%;
+      height: auto;
+    }
+
+    .media-card h3 {
+      margin: 0;
+      padding: 10px;
+      font-size: 18px;
+      background-color: #2846a7;
+      color: white;
+      text-align: center;
+    }
+
+    /* Section Styling */
+    .section {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Image & Video Module</h1>
+  </header>
+
+  <!-- Top Section -->
+  <div class="section">
+    <div class="scroll-container">
+      <!-- Media Card 1 -->
+      <div class="media-card">
+        <img src="scse-banner.jpg" alt="Engineering Project 1">
+        <h3>Engineering Project 1</h3>
+      </div>
+
+      <!-- Media Card 2 -->
+      <div class="media-card">
+        <img src="management_hierarchy_structure_for_civil_engineering_project_slide01.jpg" alt="Engineering Project 2">
+        <h3>Engineering Project 2</h3>
+      </div>
+
+      <!-- Media Card 3 -->
+      <div class="media-card">
+        <video controls autoplay muted loop>
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <h3>Engineering Video</h3>
+      </div>
+
+      <!-- Media Card 4 -->
+      <div class="media-card">
+        <img src="maxresdefault.jpg" alt="Engineering Project 3">
+        <h3>Engineering Project 3</h3>
+      </div>
+
+      <!-- Media Card 5 -->
+      <div class="media-card">
+        <video controls autoplay muted loop>
+          <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <h3>Project Animation</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Section -->
+  <div class="section">
+    <div class="scroll-container">
+      <!-- Media Card 1 -->
+      <div class="media-card">
+        <img src="63295056.jpg" alt="Engineering Project 4">
+        <h3>Engineering Project 4</h3>
+      </div>
+
+      <!-- Media Card 2 -->
+      <div class="media-card">
+        <img src="engineering-project-management-flow-chart-excel-template_dbcc326ffe__max.avif" alt="Engineering Project 5">
+        <h3>Engineering Project 5</h3>
+      </div>
+
+      <!-- Media Card 3 -->
+      <div class="media-card">
+        <video controls autoplay muted loop>
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <h3>Engineering Highlights</h3>
+      </div>
+
+      <!-- Media Card 4 -->
+      <div class="media-card">
+        <img src="OIP (6).jpg" alt="Engineering Project 6">
+        <h3>Engineering Project 6</h3>
+      </div>
+
+      <!-- Media Card 5 -->
+      <div class="media-card">
+        <video controls autoplay muted loop>
+          <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <h3>Interactive Demo</h3>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

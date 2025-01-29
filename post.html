@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Clone</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f2ef;
+    }
+
+    header {
+      background-color: #2846a7;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+    }
+
+    .sidebar {
+      width: 20%;
+      background-color: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-content {
+      width: 55%;
+      background-color: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .notifications {
+      width: 20%;
+      background-color: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .post {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .post h3 {
+      margin: 0 0 10px 0;
+    }
+
+    .post p {
+      margin: 0 0 10px 0;
+    }
+
+    .post img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #2846a7;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .button:hover {
+      background-color: #2846a7;
+    }
+
+    .comment-section {
+      margin-top: 10px;
+    }
+
+    .comment-section textarea {
+      width: 100%;
+      height: 50px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      padding: 5px;
+      resize: none;
+    }
+
+    .comment-section button {
+      background-color: #2846a7;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 8px;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+
+    .comment-section button:hover {
+      background-color: #2846a7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LinkedIn Clone</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">My Network</a>
+      <a href="#">Jobs</a>
+      <a href="#">Messaging</a>
+      <a href="#">Notifications</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>My Network</h3>
+      <ul>
+        <li><a href="#">Find Connections</a></li>
+        <li><a href="#">Manage Contacts</a></li>
+        <li><a href="#">Groups</a></li>
+      </ul>
+
+      <h3>Jobs</h3>
+      <ul>
+        <li><a href="#">Find Jobs</a></li>
+        <li><a href="#">Post a Job</a></li>
+        <li><a href="#">Saved Jobs</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <div class="post">
+        <h3>Post 1: Bridge Construction Project</h3>
+        <img src="OIP (1).jpg" alt="Bridge Construction">
+        <p>This post highlights the progress made on the bridge construction project. The team successfully completed the foundation work and is now moving toward the superstructure phase.</p>
+        <a href="#" class="button">Like</a>
+        <a href="#" class="button">Share</a>
+        <div class="comment-section">
+          <textarea placeholder="Add a comment..."></textarea>
+          <button>Comment</button>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>Post 2: Solar Panel Installation</h3>
+        <img src="OIP (2).jpg" alt="Solar Panel Installation">
+        <p>In this project, we installed state-of-the-art solar panels to power a community center. The project aims to promote sustainable energy practices.</p>
+        <a href="#" class="button">Like</a>
+        <a href="#" class="button">Share</a>
+        <div class="comment-section">
+          <textarea placeholder="Add a comment..."></textarea>
+          <button>Comment</button>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>Post 3: Smart City Initiative</h3>
+        <img src="OIP (3).jpg" alt="Smart City Initiative">
+        <p>This initiative focuses on integrating technology with urban planning. Recent developments include the implementation of smart traffic lights and efficient waste management systems.</p>
+        <a href="#" class="button">Like</a>
+        <a href="#" class="button">Share</a>
+        <div class="comment-section">
+          <textarea placeholder="Add a comment..."></textarea>
+          <button>Comment</button>
+        </div>
+      </div>
+    </main>
+
+    <aside class="notifications">
+      <h3>Notifications</h3>
+      <ul>
+        <li>John Doe liked your post.</li>
+        <li>Jane Smith sent you a connection request.</li>
+        <li>New job posting: Web Developer.</li>
+      </ul>
+    </aside>
+  </div>
+</body>
+</html>
