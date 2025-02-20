@@ -3,6 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to Your Dashboard</h1>
+    <p>You are successfully logged in.</p>
+    <button onclick="logout()">Logout</button>
+
+    <script>
+        // Check if user is logged in
+        if (!localStorage.getItem("token")) {
+            window.location.href = "login.html"; // Redirect if not logged in
+        }
+
+        function logout() {
+            localStorage.removeItem("token");
+            window.location.href = "login.html"; // Redirect to login
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Job Posting Social Network</title>
     <style>
         /* General Reset */
@@ -223,6 +248,10 @@
             <a href="recruiter.html"></a>
             <a href="mentor.html"></a>
             <a href="getstart.html"></a>
+            <a href="login.html"></a>
+         
+
+            
 
         </nav>
     </header>
@@ -230,7 +259,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <h1>Welcome to JobConnect</h1>
-        <p>Your bridge to career opportunities and professional networking.</p>
+        <p>Your bridge to car
+            
+            eer opportunities and professional networking.</p>
         <a href="getstart.html" class="btn">Get Started</a>    </section>
 
     <!-- Professional Network Section -->
@@ -304,3 +335,4 @@
 
   <!-- Footer -->
   <footer style="text-align: center; padding: 15px; background-color: #2846a7; color: white; margin-top: 40px;">&copy; 2025 JobConnect. All rights reserved.</footer>
+
